@@ -1,0 +1,41 @@
+#--------------------------------------------------------------
+# Python Virtual Environment
+#--------------------------------------------------------------
+python -m pip install --upgrade pip
+pip install virtualenv
+python -m venv venv3
+cd venv3\Scripts\activate
+
+pip install Flask
+python -c "import flask; print(flask.__version__)"
+
+#export FLASK_APP=hello
+#export FLASK_ENV=venv3
+#flask run
+SET FLASK_APP=hello # for Winows 
+SET FLASK_ENV=venv3 # for Winows
+flask run -p 5001
+
+pip freeze > requirements.txt
+
+#--------------------------------------------------------------
+# Git Commands
+#--------------------------------------------------------------
+git init
+
+touch README.md
+
+touch .gitignore #(Add venv3, and __pycache__)
+
+git add -A
+
+git commit -m "Initial Commit"
+
+#To link GitHub repository as origin to local git repository
+#Create repository 'bloxy' in github.com and then type the 
+#below command in local directory git bash 
+git remote add origin git@github.com:Jagadeesh-Sali/bloxy.git
+
+#To push local git repository contents to GitHub repository
+git push -u origin master
+

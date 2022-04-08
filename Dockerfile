@@ -12,10 +12,6 @@ COPY . /app
 # Install Python application dependencies specified in requirements.txt
 RUN pip install -r requirements.txt
 
-#CMD ["/bin/sh", "export FLASK_APP=hello"] 
-
-#CMD ["/bin/sh", export FLASK_ENV=./venv3] 
-
 # Use Port 5000 as mentioned in launch.py
 EXPOSE 5000
 
